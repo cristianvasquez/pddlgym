@@ -16,7 +16,7 @@ def demo_random(env_name, render=True, problem_index=0, verbose=True):
 
     run_random_agent_demo(env=env, planner_name=env_name, outdir='results', verbose=verbose, seed=0)
 
-def run_random_agent_demo(env, planner_name,outdir='/tmp', max_num_steps=10, fps=3,
+def run_random_agent_demo(env, planner_name,outdir='/tmp', max_num_steps=20, fps=3,
                           verbose=False, seed=None):
     outdir = "{}/{}".format(outdir, planner_name)
     if not os.path.exists(outdir):
@@ -104,9 +104,9 @@ class VideoWrapper(gym.Wrapper):
 
 if __name__ == '__main__':
     def run_all(render=True, verbose=True):
-        # demo_random("sokoban", render=render, verbose=verbose)
+        demo_random("sokoban", render=render, verbose=verbose)
         demo_random("rearrangement", render=render, problem_index=6, verbose=verbose)
-        # demo_random("minecraft", render=render, verbose=verbose)
-        # demo_random("blocks_operator_actions", render=render, verbose=verbose)
+        demo_random("minecraft", render=render, verbose=verbose)
+        demo_random("blocks_operator_actions", render=render, verbose=verbose)
 
     run_all()
