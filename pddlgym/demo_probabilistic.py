@@ -4,7 +4,6 @@ from pddlgym.wrappers import ProbabilisticWrapper
 import gym
 import pddlgym
 
-
 def demo_ff_planning(env_name, wrapper_args, num_problems, render=True, test=False, verbose=True):
     gym_name = env_name.capitalize()
     if test:
